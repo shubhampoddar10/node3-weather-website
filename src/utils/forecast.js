@@ -8,7 +8,7 @@ const foreCast = (latitude,longitude, callBack) => {
         } else if(body.error) {
             callBack('Unable to find Coordiante',undefined)
         } else {
-            callBack(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} and it feels like ${body.current.feelslike}`)
+            callBack(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} and it feels like ${body.current.feelslike}. The Humidity is ${body.current.humidity}%.`)
         }
     })
 }
